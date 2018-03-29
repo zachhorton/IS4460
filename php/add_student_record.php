@@ -49,8 +49,10 @@
 	    <script type="text/javascript">
         var j$ = jQuery.noConflict();
             j$( function() {
-                j$("#dateOB").datepicker();
-                j$( "#dateOB" ).datepicker( "option", "dateFormat", "yy-mm-dd" );
+                j$("#dateDOB").datepicker();
+                j$( "#dateDOB" ).datepicker( "option", "dateFormat", "yy-mm-dd" );
+                j$("#dateBD").datepicker();
+                j$( "#dateBD" ).datepicker( "option", "dateFormat", "yy-mm-dd" );
             } );   
         </script>
 	</head>
@@ -83,12 +85,12 @@
         			
         			<div class="form-group">
         				<label>Date of Birth</label>
-        				<input id="dateOB" type="text" class="form-control" placeholder="Date of Birth" name="date_of_birth" required>
+        				<input id="dateDOB" type="text" class="form-control" placeholder="Date of Birth" name="date_of_birth" required>
         			</div>
         			
         			<div class="form-group">
         				<label>Baptism Certificate</label>
-        				<input type="text" class="form-control" placeholder="Baptism Certificate" name="baptism_certificate" required>
+        				<input id="dateBD" type="text" class="form-control" placeholder="Baptism Certificate" name="baptism_certificate" required>
         			</div>
         			
         			<div class="form-group">
