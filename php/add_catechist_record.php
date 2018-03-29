@@ -26,7 +26,7 @@
         		<form action="catechist_list.php">
         			<div class="form-group">
         				<label>Catechist First Name</label>
-        				<input type="text" class="form-control" placeholder="First Name" name="catechist_first_name">
+        				<input type="text" class="form-control" placeholder="First Name" name="catechist_first_name" required>
         			</div>
         			
         			<div class="form-group">
@@ -36,7 +36,7 @@
         			
         			<div class="form-group">
         				<label>Catechist Last Name</label>
-        				<input type="text" class="form-control" placeholder="Last Name" name="catechist_last_name">
+        				<input type="text" class="form-control" placeholder="Last Name" name="catechist_last_name" required>
         			</div>
         			
         			<div class="form-group">
@@ -46,12 +46,12 @@
         			
         			<div class="form-group">
         				<label>Phone Number</label>
-        				<input type="tel" class="form-control" placeholder="Phone Number" name="phone_number">
+        				<input type="tel" class="form-control" placeholder="Phone Number" name="phone_number" required>
         			</div>
         			
         			<div class="form-group">
         				<label>E-Mail</label>
-        				<input type="email" class="form-control" placeholder="E-Mail" name="email">
+        				<input type="email" class="form-control" placeholder="E-Mail" name="email" required>
         			</div>
         			
         			

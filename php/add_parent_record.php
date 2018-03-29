@@ -27,7 +27,7 @@
         		<form method = "post" action="../controller/add_parent_controller.php">
         			<div class="form-group">
         				<label>Parent's First Name</label>
-        				<input type="text" class="form-control" placeholder="First Name" name="parent_first_name">
+        				<input type="text" class="form-control" placeholder="First Name" name="parent_first_name" required>
         			</div>
         			
         			<div class="form-group">
@@ -37,37 +37,37 @@
         			
         			<div class="form-group">
         				<label>Parent's Last Name</label>
-        				<input type="text" class="form-control" placeholder="Last Name" name="parent_last_name">
+        				<input type="text" class="form-control" placeholder="Last Name" name="parent_last_name" required>
         			</div>
         			
         			<div class="form-group">
         				<label>Street Address</label>
-        				<input type="text" class="form-control" placeholder="Address" name="address">
+        				<input type="text" class="form-control" placeholder="Address" name="address" required>
         			</div>
         			
         			<div class="form-group">
         				<label>City</label>
-        				<input type="text" class="form-control" placeholder="City" name="city">
+        				<input type="text" class="form-control" placeholder="City" name="city" required>
         			</div>
         			
         			<div class="form-group">
         				<label>State</label>
-        				<input type="text" class="form-control" placeholder="State" name="state">
+        				<input type="text" class="form-control" placeholder="State" name="state" required>
         			</div>
         			
         			<div class="form-group">
         				<label>Zip Code</label>
-        				<input type="text" class="form-control" placeholder="Zip Code" name="zip_code">
+        				<input type="text" class="form-control" placeholder="Zip Code" name="zip_code" required>
         			</div>
         			
         			<div class="form-group">
         				<label>Phone Number</label>
-        				<input type="text" class="form-control" placeholder="Phone Number" name="phone_number">
+        				<input type="text" class="form-control" placeholder="Phone Number" name="phone_number" required>
         			</div>
         			
         			<div class="form-group">
         				<label>E-Mail</label>
-        				<input type="text" class="form-control" placeholder="E-Mail" name="email">
+        				<input type="email" class="form-control" placeholder="E-Mail" name="email" required>
         			</div>
         			
         			<div class="form-group">
