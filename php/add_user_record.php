@@ -23,30 +23,34 @@
 		<?php require_once '../php/header.php';?>
 		
 		<div class="container-fluid">
-        		<form method="post" action="../controller/add_catechist_controller.php">
+        		<form method="post" action="../controller/add_user_controller.php">
         			<div class="form-group">
-        				<label>Catechist First Name</label>
-        				<input type="text" class="form-control" placeholder="First Name" name="catechist_first_name">
+        				<label>Username</label>
+        				<input type="text" class="form-control" placeholder="Username" name="username">
         			</div>
         			
         			<div class="form-group">
-        				<label>Catechist Last Name</label>
-        				<input type="text" class="form-control" placeholder="Last Name" name="catechist_last_name">
+        				<label>First Name</label>
+        				<input type="text" class="form-control" placeholder="First Name" name="first_name">
         			</div>
         			
         			<div class="form-group">
-        				<label>Language</label>
-        				<input type="text" class="form-control" placeholder="Language" name="language">
+        				<label>Last Name</label>
+        				<input type="text" class="form-control" placeholder="Last Name" name="last_name">
         			</div>
         			
         			<div class="form-group">
-        				<label>Phone Number</label>
-        				<input type="tel" class="form-control" placeholder="Phone Number" name="phone_number">
+        				<label>Password</label>
+        				<input type="password" class="form-control" placeholder="Password" name="password">
         			</div>
         			
         			<div class="form-group">
-        				<label>E-Mail</label>
-        				<input type="email" class="form-control" placeholder="E-Mail" name="email">
+        				<label>Role</label>
+        				<select name="role" size="1">
+        					<option value="none"> -- Select One -- </option>
+        					<option value="admin">Admin</option>
+        					<option value="user">User</option>
+        				</select>
         			</div>
         			
         			

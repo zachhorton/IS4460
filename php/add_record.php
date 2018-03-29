@@ -1,3 +1,5 @@
+<?php require_once '../authorization/check_session.php';?>
+
 <!DOCTYPE html>
 <html>
 
@@ -19,8 +21,7 @@
 	<body>
 	
 		<?php 
-		  require_once 'header.php';
-		  $text = "catechist_list.php"
+		  require_once '../php/header.php';
 		?>
 		
 		<form>
@@ -28,9 +29,10 @@
 				<label>Select Record to Add</label>
 				<select onChange="routePage(this.value);">
 					<option value="none"> -- Select One -- </option>
-					<option value="parentStudent"> Add Parent/Student Record</option>
 					<option value="catechist">Add Catechist Record</option>
+					<option value="sacrament">Add Sacrament Record</option>
 					<option value="classroom">Add Classroom Record</option>
+					<option value="user">Add User Record</option>
 				</select>
 			</div>
 		</form>
@@ -38,14 +40,20 @@
 	</body>
 	<script>
 		function routePage(addType) {
-// 			alert('addType: '+addType);
-			if (addType === 'parentStudent') {
-				document.location.href = 'add_parent_student_record.php';
-			} else if (addType === 'catechist') {
-				document.location.href = 'add_catechist_record.php';
-			} else if (addType === 'classroom') {
- 				//document.location.href = 'add_classroom_record.php';
-				alert('Adding classrooms is not currently supported.');
+			if (addType === 'catechist') {
+				document.location.href = '../php/add_catechist_record.php';
+			}
+			else if (addType === 'sacrament') {
+				document.location.href = '../php/add_sacrament_record.php';
+			}
+			else if (addType === 'classroom') {
+ 				document.location.href = '../php/add_classroom_record.php';
+			}
+			else if (addType === 'classroom') {
+ 				document.location.href = '../php/add_classroom_record.php';
+			}
+			else if (addType === 'user') {
+				document.location.href = '../php/add_user_record.php';
 			}
 		}
 	</script>

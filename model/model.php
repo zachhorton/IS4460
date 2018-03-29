@@ -153,10 +153,9 @@
     
     class CatechistModel {
         
-        public $catechist_id, $first_name, $last_name, $spoken_language, $phone_number, $e_mail;
+        public $first_name, $last_name, $spoken_language, $phone_number, $e_mail;
         
-        function __construct($catechist_id, $first_name, $last_name, $spoken_language, $phone_number, $e_mail) {
-            $this->catechist_id = $catechist_id;
+        function __construct ($first_name, $last_name, $spoken_language, $phone_number, $e_mail) {
             $this->first_name = $first_name;
             $this->last_name = $last_name;
             $this->spoken_language = $spoken_language;
@@ -173,7 +172,7 @@
             $phone_number = $this->phone_number;
             $e_mail = $this->e_mail;
             
-            $query = "INSERT INTO catechist (first_name, last_name, spoken_language, phone_number, e_mail) VALUES ('$first_name', '$last_name', '$spoken_language', '$phone_number', '$e_mail')";
+            $query = "INSERT INTO `catechist` (`catechist_id`, `first_name`, `last_name`, `spoken_language`, `phone_number`, `e_mail`) VALUES (NULL, '$first_name', '$last_name', '$spoken_language', '$phone_number', '$e_mail')";
             
             $result = $conn->query($query);
             if (!$result) {
@@ -216,20 +215,24 @@
     
     class ClassroomModel {
         
-        public $classroom_number, $classroom_size;
+        public $classroom_number, $classroom_size, $sacrament_id, $catechist_id;
         
-        function __construct($classroom_number, $classroom_size) {
+        function __construct($classroom_number, $classroom_size, $sacrament_id, $catechist_id) {
             $this->classroom_number = $classroom_number;
             $this->classroom_size = $classroom_size;
+            $this->sacrament_id = $sacrament_id;
+            $this->catechist_id = $catechist_id;
         }
         
-        function insert($sacrament_id, $catechist_id) {
+        function insert() {
             global $conn;
             
             $classroom_number = $this->classroom_number;
             $classroom_size = $this->classroom_size;
+            $sacrament_id = $this->sacrament_id;
+            $catechist_id = $this->catechist_id;
             
-            $query = "INSERT INTO classroom (classroom_number, classroom_size, sacrament_id, catechist_id) VALUES ('$classroom_number', $classroom_size, $sacrament_id, $catechist_id)";
+            $query = "INSERT INTO `classroom` (`classroom_id`, `classroom_number`, `classroom_size`, `sacrament_id`, `catechist_id`) VALUES (NULL, '$classroom_number', '$classroom_size', '$sacrament_id', '$catechist_id')";
             
             $result = $conn->query($query);
             if (!$result) {
@@ -287,7 +290,12 @@
             $sacrament = $this->sacrament;
             $meeting_time = $this->meeting_time;
             
-            $query = "INSERT INTO sacrament (sacrament, meeting_time) VALUES ('$sacrament', '$meeting_time')";
+            $query = "INSERT INTO `sacrament` (`sacrament_id`, `sacrament`, `meeting_time`) VALUES (NULL, '$sacrament', '$meeting_time')";
+            
+            $result = $conn->query($query);
+            if (!$result) {
+                die($connect->error);
+            }
         }
         
     }
@@ -355,14 +363,14 @@
             $password = $this->salt_and_hash($this->password);
             $role = $this->role;
             
-            $query = "INSERT INTO users (username, first_name, last_name, password) VALUES ('$username', '$first_name', '$last_name', '$password')";
+            $query = "INSERT INTO `users` (`username`, `first_name`, `last_name`, `password`) VALUES ('$username', '$first_name', '$last_name', '$password')";
             
             $result = $conn->query($query);
             if (!$result) {
                 die($connect->error);
             }
             
-            $query = "INSERT INTO roles (username, role) VALUES ('$username', '$role')";
+            $query = "INSERT INTO `roles` (`username`, `role`) VALUES ('$username', '$role')";
             
             $result = $conn->query($query);
             if (!$result) {

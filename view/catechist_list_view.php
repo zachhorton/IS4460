@@ -42,9 +42,6 @@
 			<div class="table-responsive table-bordered">
 				<table class="table table-hover" id="myTable">
 					<thead>
-						<tr>
-							<th><a href="../php/add_catechist_record.php">Add Catechist Record</a></th>
-						</tr>
 
 						<tr class="thead-light">
 							<th>Catechist ID</th>
