@@ -42,9 +42,6 @@
 			<div class="table-responsive table-bordered">
 				<table class="table table-hover" id="myTable">
 					<thead>
-						<tr>
-							<th><a href="add_parent_student_record.php">Add Sacrament Record</a></th>
-						</tr>
 
 						<tr class="thead-light">
 							<th>Sacrament ID</th>
