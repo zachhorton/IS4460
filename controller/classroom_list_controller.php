@@ -5,7 +5,7 @@
     require_once '../authorization/check_session.php';
     
     //Connect to Database
-    $conn = new mysqli($hn, $un, $pw, $db);
+    $conn = new mysqli($hn, $un, $pw, $db, $port);
     if ($conn->error) {
         die($conn->connect_error);
     }
