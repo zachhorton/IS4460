@@ -72,12 +72,15 @@
         			
         			<div class="form-group">
         				<label>Payment</label>
-        				<input type="text" class="form-control" placeholder="Payment" name="payment">
+                        <select name="payment" size="1">
+                            <option value="" />
+                            <option value="Paid in Full">Paid in Full</option>
+                            <option value="Partial Payment">Partial Payment</option>
+                            <option value="Not Paid">Not Paid</option>
+                        </select>
         			</div>
         			  			
         			<button type="submit" class="btn btn-secondary">Submit</button>
-        			
-                			
         		</form>
 		</div>
 		
