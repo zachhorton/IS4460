@@ -4,7 +4,7 @@
     require_once '../util/dbinfo.php';
     
     //Connect to Database
-    $conn = new mysqli($hn, $un, $pw, $db, $port);
+    $conn = new mysqli($hn, $un, $pw, $db);
     if ($conn->error) {
         die($conn->connect_error);
     }
